@@ -1,0 +1,21 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#container{
+    margin: 20px auto;
+    width: 1000px;
+}
+
+.first_color{
+    /* background-color: red; */
+    width: 40px;
+    height: 40px;
+}
+
+.second_color{
+    /* background-color: black; */
+    width: 40px;
+    height: 40px;
+}
