@@ -1,0 +1,1 @@
+SELECT * FROM testini_schema.tests;
