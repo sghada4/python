@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+</head>
+
+<body>
+    <h1>Welcome to the great number Game!</h1>
+    <p>I'm thinking of a number between 1 and 100</p>
+    <p>Take a guess!</p>
+    <form action="/game" , method="post">
+        <input type="number" name="number_submitted">
+        <button>Submit</button>
+    </form>
+    {% if 'number_submitted' in session: %}
+            {% if session['number_submitted'] == session['number'] %}
+                <div style="background-color: green; width: 200px; height: 200px; color: white;">
+                    <h2>{{session['number']}} was the number!</h2>
+                    <a href="/reset">Play Again</a>
+                </div>
+            {% elif session['number_submitted'] | int < session['number'] | int %}
+                <div style="background-color: red; width: 200px; height: 200px;">
+                    <h2> Too Low!!!</h2>
+                    
+                </div>
+            {% else %}
+                <div style="background-color: red; width: 200px; height: 200px;">
+                    <h2>Too High!!!</h2>
+                </div>
+            {% endif %}
+        {% endif %}
+</body>
+
+</html>

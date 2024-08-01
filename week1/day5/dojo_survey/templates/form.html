@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container pt-5">
+        <form action="/process" method="POST">
+            <label class="form-label">Your Name: </label>
+            <input type="text" name="name" class="form-control">
+            <br>
+            <label class="form-label">Dojo Location: </label>
+            <select name="location" class="form-select">
+                <option>Tunis</option>
+                <option>San Jose</option>
+            </select>
+            <br>
+            <label class="form-label">Favorite Language: </label>
+            <select name="language" class="form-select">
+                <option>Python</option>
+                <option>C#</option>
+                <option>Java</option>
+            </select>
+            <br>
+            <label class="form-label">Comment (optional): </label>
+            <textarea name="comment" cols="30" rows="10" class="form-control"></textarea>
+            <br>
+            <button class="btn btn-primary mb-3">Send</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Checker Board</title>
+</head>
+
+<body>
+    <div id="container">
+        <table>
+
+            {% for i in range(x) %}
+            {% if i%2 == 0 %}
+            <tr>
+                {% if y%2 == 0 %}
+                {% for j in range(y//2) %}
+                <td class="first_color"></td>
+                <td class="second_color"></td>
+                {% endfor %}
+                {% else %}
+                {% for j in range(y//2) %}
+                <td class="second_color"></td>
+                <td class="first_color"></td>
+                {% endfor %}
+                <td class="second_color"></td>
+                {% endif %}
+            </tr>
+            {% else %}
+            <tr>
+                {% if y%2 == 0 %}
+                {% for j in range(y//2) %}
+                <td class="second_color"></td>
+                <td class="first_color"></td>
+                {% endfor %}
+                {% else %}
+                {% for j in range(y//2) %}
+                <td class="first_color"></td>
+                <td class="second_color"></td>
+                {% endfor %}
+                <td class="first_color"></td>
+                {% endif %}
+            </tr>
+            {% endif %}
+            {% endfor %}
+        </table>
+    </div>
+
+
+
+
+    <script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>
