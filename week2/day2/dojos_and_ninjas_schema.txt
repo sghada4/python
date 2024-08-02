@@ -1,0 +1,32 @@
+INSERT INTO dojos (name) 
+VALUES ('dojo1'), ('dojo2'), ('dojo3');
+
+SET SQL_SAFE_UPDATES = 0;
+DELETE FROM dojos;
+
+INSERT INTO dojos (name) 
+VALUES ('nefel'), ('dojo_us'), ('dojo_canada');
+
+INSERT INTO ninjas (first_name, last_name, age, dojo_id) 
+VALUES ('oussama', 'hkiri', 27, 4), ('yaya', 'dembele', 25, 4), ('ghada', 'sassi', 27,4);
+
+INSERT INTO ninjas (first_name, last_name, age, dojo_id) 
+VALUES ('malek', 'turki', 27, 5), ('awatef', 'hajji', 32, 5), ('hassen', 'jbali', 33,5);
+
+INSERT INTO ninjas (first_name, last_name, age, dojo_id) 
+VALUES ('najwa', 'elfahem', 32, 6), ('walid', 'guellouz', 40, 6), ('mohamed', 'amri', 20,6);
+
+SELECT * FROM ninjas 
+JOIN dojos
+ON ninjas.dojo_id = dojos.id
+WHERE dojos.id=4;
+
+SELECT * FROM ninjas 
+JOIN dojos
+ON ninjas.dojo_id = dojos.id
+WHERE dojos.id=6;
+
+SELECT * FROM dojos 
+JOIN ninjas
+ON ninjas.dojo_id = dojos.id
+WHERE ninjas.id=12;
