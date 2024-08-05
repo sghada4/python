@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Email Addresses Entered:</h1>
+    <div style="background-color: green; border: solid 2px black; width: 300px; height: 80px; text-align: center;">
+        The email address you Entered(____) <br>
+        in a VALID email address! Thank you!
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>email</th>
+                <th>created at</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in all_emails %}
+            <tr>
+                <td>{{row.email}}</td>
+                <td>{{row.created_at}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

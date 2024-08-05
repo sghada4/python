@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojos List</title>
+</head>
+<body>
+    <h1>All dojos</h1>
+    <a href="/dojos/form">Add a Dojo</a>
+    <ul>
+    {% for one_dojo in us_dojos %}
+        <li><a href="/dojos/{{one_dojo.id}}/show">{{one_dojo.name}}</a></li>
+    {% endfor %}
+</ul>
+<a href="/ninjas/new">Add ninja</a>
+</body>
+</html>
